@@ -1,0 +1,19 @@
+python3 -m venv venv
+. venv/bin/activate
+pip install fastapi
+pip install uvicorn
+cd app 
+python main.py 
+http://127.0.0.1:8000/items/5
+
+
+docker build -t python-fastapi .
+docker run python-fastapi
+docker run -p 8000:8000  python-fastapi  # map local port to docket port
+
+http://0.0.0.0:8000/items/5
+docker ps
+docker exec -it d6e50f7d2d5d /bin/sh
+ls
+cd ..
+ls
